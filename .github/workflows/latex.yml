@@ -5,24 +5,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.TOKEN_GITHUB }}
+          fetch-depth: 0
+      
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
+      
       - name: Uploading artifact
         uses: actions/upload-artifact@v4
         with:
           name: PDF
           path: main.pdf
+      
       - name: Get Time
         id: time
         uses: nanzm/get-time-action@v1.1
         with:
           timeZone: -7
           format: 'YYYY-MM-DD-HH-mm-ss'
+      
       - name: Install ghostscript
         run: sudo apt-get update --fix-missing && sudo apt install ghostscript
+      
       - name: Change ImageMagick security policy
         run: |
           DQT='"' 
@@ -46,20 +54,23 @@ jobs:
           sudo sed -i "s/$WDT/$WDTR/" /etc/ImageMagick-6/policy.xml
           sudo sed -i "s/$MAP/$MAPR/" /etc/ImageMagick-6/policy.xml
           sudo sed -i "s/$MEM/$MEMR/" /etc/ImageMagick-6/policy.xml
-
-
+      
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y imagemagick
+      
       - name: Convert PDF to PNG
         run: convert -density 900 -background white -alpha off main.pdf -resize 25% -quality 90 -colorspace RGB resume.png
+      
       - name: Commit PNG
         id: commit
         run: |
           git config --local user.email "action[bot]@github.com"
           git config --local user.name "github-actions[bot]"
           git add resume.png
-          git commit -m "[bot] updated resume.png"
+          git commit -m "[bot] updated resume.png" || echo "No changes to commit"
+      
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.TOKEN_GITHUB }}
+          branch: ${{ github.ref_name }}
