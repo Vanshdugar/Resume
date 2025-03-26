@@ -1,0 +1,228 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{enumitem}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Vansh Dugar} \\ \vspace{1pt}
+    \href{tel:+919385526636}{\underline{+91 9385526636}} $|$ \href{mailto:vansh.d.work@gmail.com}{\underline{vansh.d.work@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/vansh-dugar}{\underline{Linkedin}} $|$
+    \href{https://github.com/Vanshdugar}{\underline{Github}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Vellore Institute of Technology(VIT) , CGPA- 8.72 }{Bhopal, IN}
+      {Integrated Master of Technology in Artificial Intelligence}{July 2021 -- May 2026}
+       \resumeSubheading
+      {Nandha Central City School , 93.8\%  }{Erode, IN}
+      {Class 12th,CBSE}{May 2021}
+   \resumeSubheading
+      {Nandha Central City School , 88\%  }{Erode, IN}
+      {Class 10th,CBSE}{May 2019}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+   \resumeSubheading
+      {Marketing Tech Intern }{November 2024 -- February 2025}
+      {Xoxoday by GIIFT}{Bangalore, IN}
+      \resumeItemListStart
+        \resumeItem{Helping to create AI assistant to assist with everyday queries by customers CS Bot with adding NLP and LLM utility,with intent detection and free flow capability reducing the agent handover rate by  almost 80\% .}
+        \resumeItem{Creating custom copilots using copilot studio and azure AI studio to cater HR queries by employees to reduce human involvement and efficiently utilize time}
+      \resumeItemListEnd
+     
+      
+   
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Web Development Intern }{January 2023 -- March 2023}
+      {Humans Of Chhattisgarh}{Chhattisgarh, IN (Remote)}
+      \resumeItemListStart
+        \resumeItem{Collaborated with a team of web developers to design and launch a website that showcases the organization's work and features regular blog posts, enhancing online presence and engagement}
+        
+    \resumeItemListEnd
+
+   
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{LLM Fine-tuning (Viskk)} $|$ \emph{Python, Deep Learning, OpenAI,LLM}}{October 2024}
+          \resumeItemListStart
+            \resumeItem{Developing LLM-based applications to enhance the user experience and streamline the efficiency of email applications}
+            \resumeItem{Building a mail generation system using Meta's LLaMA model to automate and optimize email composition and responses }
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\textbf{Khoya Paya (Face Detection)} $|$ \emph{Python, Deep Learning, Computer Vision}}{May 2024}
+          \resumeItemListStart
+            \resumeItem{Implemented a face recognition system to match and identify faces from a pre-stored image database}
+            \resumeItem{Utilized a Computer Vision library to calculate and evaluate confidence scores for matched faces }
+            \resumeItem{Designed the application to leverage Aadhaar data, enabling government officials to assist lost individuals with memory issues or missing children in reuniting with their families}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{CNN-Based Fruit Quality Detection} $|$ \emph{Python, Deep Learning, Neural Networks, Dataframes}}{August 2023}
+          \resumeItemListStart
+            \resumeItem{Trained a neural network to assess and determine the quality of fruit based on its image}
+            \resumeItem{Implemented Convolutions using EfficientNet model to train and test on 2D images}
+            \resumeItem{Visualized the confusion matrix to present the results and performance metrics of the model}
+          \resumeItemListEnd
+      \resumeProjectHeading
+         
+            
+          \resumeItemListEnd
+
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, SQL, JavaScript, HTML/CSS, Figma, Canva } \\
+     \textbf{Frameworks}{:Tensorflow, PyTorch, Scikit-learn, Hadoop} \\
+     \textbf{Developer Tools}{: Git, Google Cloud Platform, VS Code, PyCharm, IntelliJ, Google Colab} \\
+     \textbf{Libraries}{: Pandas, NumPy, Matplotlib, scikit-learn, cv2, seaborn, Keras, Tensorflow, PyTorch}
+    }}
+ \end{itemize}
+\section{Activities}
+
+    \resumeItemListStart
+        \resumeItem{Participated in Innovation and Emerging Trends in Computing and Information Technologies (IETCIT) 2024 conference and was invited to showcase our research paper.}
+
+        \resumeItem{Graphics Team lead at Omdena VIT Bhopal local chapter where I Led a team of creative professionals dedicated to producing high-quality content for social media platforms, driving engagement and brand visibility}
+        
+    \resumeItemListEnd
+    
+
+\end{document}
