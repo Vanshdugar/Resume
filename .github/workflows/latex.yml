@@ -46,7 +46,10 @@ jobs:
           sudo sed -i "s/$WDT/$WDTR/" /etc/ImageMagick-6/policy.xml
           sudo sed -i "s/$MAP/$MAPR/" /etc/ImageMagick-6/policy.xml
           sudo sed -i "s/$MEM/$MEMR/" /etc/ImageMagick-6/policy.xml
-          
+
+
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
       - name: Convert PDF to PNG
         run: convert -density 900 -background white -alpha off main.pdf -resize 25% -quality 90 -colorspace RGB resume.png
       - name: Commit PNG
