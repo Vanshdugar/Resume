@@ -69,8 +69,8 @@ jobs:
         run: |
           git config --local user.email "action[bot]@github.com"
           git config --local user.name "github-actions[bot]"
-          git add resume.png
-          git commit -m "[bot] updated resume.png" || echo "No changes to commit"
+          git add resume.png main.pdf
+          git commit -m "[bot] updated resume.png and main.pdf" || echo "No changes to commit"
       
       - name: Push changes
         uses: ad-m/github-push-action@master
