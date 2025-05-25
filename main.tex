@@ -1,6 +1,6 @@
 
 
-\documentclass[letterpaper,10pt]{article}
+\documentclass[letterpaper,10.5pt]{article}
 \usepackage{enumitem}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -112,10 +112,10 @@
 \begin{center}
     \textbf{\Huge \scshape Vansh Dugar} \\ \vspace{1pt}
     \href{tel:+919385526636}{+91 9385526636} $|$ \href{mailto:vansh.d.work@gmail.com}{vansh.d.work@gmail.com} $|$ 
-    \href{https://linkedin.com/in/vansh-dugar}{\faLinkedinSquare\ vansh-dugar} $|$
-    \href{https://github.com/Vanshdugar}{\faGithub\ Vanshdugar}
+    \href{https://linkedin.com/in/vansh-dugar}{ \underline{linkedin.com/vansh-dugar}} $|$
+    \href{https://github.com/Vanshdugar}{ \underline{github.com/Vanshdugar}}
 \end{center}
-
+%\faGithub \faLinkedinSquare\
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -132,18 +132,6 @@
   \resumeSubHeadingListEnd
 
 
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
-   \resumeSubheading
-      {Marketing Tech Intern }{November 2024 -- February 2025}
-      {Xoxoday by GIIFT}{Bangalore, IN}
-      \resumeItemListStart
-        \resumeItem{Helping to create AI assistant to assist with everyday queries by customers CS Bot with adding NLP and LLM utility,with intent detection and free flow capability reducing the agent handover rate by  almost 80\% .}
-        \resumeItem{Creating custom copilots using copilot studio and azure AI studio to cater HR queries by employees to reduce human involvement and efficiently utilize time}
-      \resumeItemListEnd
-     
-      
    
       
 % -----------Multiple Positions Heading-----------
@@ -156,22 +144,21 @@
 %    \resumeSubHeadingListEnd
 %-------------------------------------------
 
-    \resumeSubheading
-      {Web Development Intern }{January 2023 -- March 2023}
-      {Humans of Chhattisgarh}{Chhattisgarh, IN (Remote)}
-      \resumeItemListStart
-        \resumeItem{Collaborated with a team of web developers to design and launch a website that showcases the organization's work and features regular blog posts, enhancing online presence and engagement}
-        
-    \resumeItemListEnd
 
-   
-
-  \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \resumeSubHeadingListStart
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{Multi-Agent Article Generator} $|$ \emph{Python, CrewAI, OpenAI, LLM}}{May 2025}
+    \resumeItemListStart
+      \resumeItem{Built a multi-agent AI system using CrewAI to autonomously research and generate articles with distinct agent roles (Researcher, Writer, Editor).}
+      \resumeItem{Integrated real-time web search via langchain\_community tools, enabling context-rich content creation using LLMs.}
+      \resumeItem{Designed and orchestrated agent workflows with distinct roles and goals, applying AI task delegation, agent tooling, and context-aware memory.}
+    \resumeItemListEnd
+
+
 
       \resumeProjectHeading
           {\textbf{Viskk (LLM Fine-tuning)} $|$ \emph{Python, Deep Learning, OpenAI,LLM}}{October 2024}
@@ -183,7 +170,9 @@
       \resumeProjectHeading
           {\textbf{Khoya Paya (Face Identification)} $|$ \emph{Python, Deep Learning, Computer Vision}}{May 2024}
           \resumeItemListStart
-            \resumeItem{Implemented a face recognition system using advanced image processing and object detection techniques to match and identify faces from a pre-stored image database}
+            \resumeItem{Implemented a face recognition system using advanced image processing and object detection techniques to match and
+ identify faces from a pre-stored image database}
+            \resumeItem{Utilized a Computer Vision library to calculate and evaluate confidence scores for matched faces}
             \resumeItem{Designed the application to leverage Aadhaar card data, enabling government officials to assist lost individuals with memory issues or missing children in reuniting with their families}
           \resumeItemListEnd
       \resumeProjectHeading
@@ -192,13 +181,34 @@
             \resumeItem{Trained a Convolutional Network to assess and determine the quality of fruit based on its image using EfficientNet model to train and test on 2D Images with testing Accuracy of 98\%}
             \resumeItem{Visualized the confusion matrix to present the results and performance metrics of the model}
           \resumeItemListEnd
-      \resumeProjectHeading
-         
+\resumeSubHeadingListEnd         
             
-          \resumeItemListEnd
 
 
 
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+   \resumeSubheading
+      {Marketing Tech Intern }{November 2024 -- February 2025}
+      {Xoxoday by GIIFT}{Bengaluru, IN}
+      \resumeItemListStart
+        \resumeItem{Developed AI assistant (CS Bot) using Copilot Studio and Azure AI Studio with NLP and LLM capabilities, enabling query resolution for customers and HR, reducing agent workload by 80\%.}
+        \resumeItem{Improved operational efficiency through custom copilot solutions and free-flow intent detection}
+      \resumeItemListEnd
+         \resumeSubheading
+      {Web Development Intern }{January 2023 -- March 2023}
+      {Humans of Chhattisgarh}{Chhattisgarh, IN (Remote)}
+      \resumeItemListStart
+        \resumeItem{Collaborated with web developers to design and launch a website showcasing organizational work, blog posts, and engagement features.}
+        
+        
+    \resumeItemListEnd
+
+   
+
+  \resumeSubHeadingListEnd
+      
 
 %
 %-----------PROGRAMMING SKILLS-----------
@@ -206,31 +216,22 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: Python, SQL } \\
-     \textbf{Developer Tools}{: Git, Google Cloud Platform, VS Code, Google Colab}
+     \textbf{Developer Tools}{: Git, Google Cloud Platform, VS Code, Google Colab} \\
+     \textbf{Frameworks}{: CrewAI, Scikit-learn, Pandas, Tensorflow, NumPy } 
      
     }}
  \end{itemize}
-\section{Certification}
-    \resumeSubHeadingListStart
-
-      \resumeProjectHeading
-          {\textbf{Generative AI with Diffusion Models} $|$ \emph{NVIDIA}}{}
+\section{Co-Curricular Activities}      
           \resumeItemListStart
-            \resumeItem{Completed a hands-on course on Generative AI with Diffusion Models, building and training conditional image generation models using U-Net and classifier-free guidance.
+            \resumeItem{Completed a hands-on certification course on Generative AI with Diffusion Models.
+            }
+            \resumeItem{Presented "Enhancing Power Transformer Reliability with Machine Learning-Based Fault Detection and Data Analysis" (DOI:10.1007/978-3-031-80839-5\_2) at IETCIT 2024.
+            }
+            \resumeItem{Led content creation for social media at Omdena VIT Bhopal, enhancing team collaboration and brand visibility,
             }
           \resumeItemListEnd
-      \resumeItemListEnd
-          
-\section{Activities}
 
-    \resumeItemListStart
-        \resumeItem{Participated in Innovation and Emerging Trends in Computing and Information Technologies (IETCIT) 2024 conference and was invited to showcase our research paper. DOI: 10.1007/978-3-031-80839-5\_2}
-
-        \resumeItem{Graphics Team lead at Omdena VIT Bhopal local chapter where I Led a team of creative professionals dedicated to producing high-quality content for social media platforms, driving engagement and brand visibility}
-        
-        
-        
-    \resumeItemListEnd
+\resumeSubHeadingListEnd
     
 
 \end{document}
